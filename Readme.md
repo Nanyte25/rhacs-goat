@@ -1,4 +1,4 @@
-# rhacs-kind
+# rhacs-goat
 A development setup for RHACS operator-based deploy in a kind cluster and with a local registry.
 
 ## Prerequisites
