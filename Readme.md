@@ -282,7 +282,7 @@ oc apply -f acs-bundles/$SECURED_CLUSTER_NAME-secure.yaml
 
 ### Helm
 
-- Login to cluster via backplane and init via helm
+- Login to cluster via OC and init via helm
 
 ```shell
 
