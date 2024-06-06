@@ -88,7 +88,7 @@ cd kubernetes-goat/platforms/kind-setup
 bash setup-kind-cluster-and-goat.sh
 ```
 
-# Setting up RHACS on a Openshift V.4 CLuster.
+# Setting up RHACS on a Openshift V.4 Cluster.
 
 ### Prerequisites 
 
@@ -101,7 +101,7 @@ bash setup-kind-cluster-and-goat.sh
 
 Based on the Red Hat workshop initial concept 
 
-[ACS workShop](https://redhat-scholars.github.io/acs-workshop/acs-workshop/02-getting_started.html#install_acs_central_oc_client0
+[ACS workShop](https://redhat-scholars.github.io/acs-workshop/acs-workshop/02-getting_started.html#install_acs_central_oc_client0)
 
 ## Create OSD cluster 
 
@@ -262,7 +262,7 @@ oc apply -f acs-bundles/$SECURED_CLUSTER_NAME-secure.yaml
 ```
 
 ```shell
-SECURED_CLUSTER_NAME=toda-secure2
+SECURED_CLUSTER_NAME=mfreer-secure2
 CENTRAL_URL= # from verify central endpoint step
 
 cat << EOF > acs-bundles/$SECURED_CLUSTER_NAME-secure.yaml
