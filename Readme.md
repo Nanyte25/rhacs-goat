@@ -1,4 +1,6 @@
-# rhacs-goat
+# rhacs-goat 
+![alt text<](/images/acs.png)  
+### Lcoal Setup 
 A development setup for RHACS operator-based deploy in a kind cluster and with a local registry.
 
 ## Prerequisites
@@ -69,5 +71,19 @@ $ make up-ui
 ## Notes
 1. Scanner and Central pods can take a while to load due to their DBs taking time to load.
 2. Image builds can take a while.
-# rhacs-goat
-# rhacs-goat
+
+
+## Kubernetes Goat Setup
+
+![alt Text >](/images/Kube-goat.png)
+
+- Navigate to the folder for setup and installation of the Kubernetes Goat using KiND
+
+```
+cd kubernetes-goat/platforms/kind-setup
+```
+- Run the following command to set up the KIND cluster
+
+```
+bash setup-kind-cluster-and-goat.sh
+```
