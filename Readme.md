@@ -11,6 +11,65 @@ A development setup for RHACS operator-based deploy in a kind cluster and with a
   $ cd rhacs-kind
   ```
 
+
+## Architecture
+
+
+```mermaid
+graph TD
+  user["User"]
+  cli["roxctl CLI"]
+  api["API clients"]
+  lb["Load balancer or Ingress Controller"]
+  central["Central"]
+  scanner["Scanner"]
+  sensor1["Sensor"]
+  ac["Admission controller"]
+  collector1["Collector"]
+  nodes1["Nodes"]
+  kg["Kubernetes Goat"]
+  sensor2["Sensor (KIND)"]
+  ac2["Admission controller (KIND)"]
+  collector2["Collector (KIND)"]
+  nodes2["Nodes (KIND)"]
+  slack["Slack Integration"]
+  pagerduty["PagerDuty Integration"]
+  ir["Image registries"]
+  third_party["Third-party systems"]
+  proxy1["Web proxy (optional)"]
+  proxy2["Web proxy (optional)"]
+
+  user --> cli
+  user --> api
+  cli --> lb
+  api --> lb
+  lb --> central
+  central --> scanner
+  central --> sensor1
+  central --> sensor2
+  central --> slack
+  central --> pagerduty
+  scanner --> ir
+  sensor1 --> ac
+  sensor1 --> collector1
+  ac --> nodes1
+  collector1 --> nodes1
+  sensor2 --> ac2
+  sensor2 --> collector2
+  ac2 --> nodes2
+  collector2 --> nodes2
+  third_party --> proxy1
+  ir --> proxy1
+  third_party --> proxy2
+  ir --> proxy2
+  lb --> proxy1
+  lb --> proxy2
+  slack --> proxy1
+  slack --> proxy2
+  kg --> central
+
+```
+
 > Note: No need to use a fork repo if you don't intend to contribute upstream.
 
 ## Set up the kind cluster
